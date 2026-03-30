@@ -1,0 +1,8 @@
+# Antigravity specific
+.antigravity/memory/
+*.log
+
+# General
+.DS_Store
+node_modules/
+.env

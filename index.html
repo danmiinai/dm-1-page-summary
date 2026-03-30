@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Miin | Co-founder & Finance Executive</title>
+    <style>
+        :root {
+            --bg-color: #f3f4f6;
+            --text-color: #374151;
+            --heading-color: #111827;
+            --card-bg: #ffffff;
+            --accent-color: #2563eb;
+            --border-color: #e5e7eb;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition-speed: 0.3s;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #111827;
+            --text-color: #d1d5db;
+            --heading-color: #f9fafb;
+            --card-bg: #1f2937;
+            --accent-color: #3b82f6;
+            --border-color: #374151;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 768px;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Toggle Switch styling */
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            outline: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 3.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .interests {
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2.5rem;
+        }
+
+        .interests h2 {
+            color: var(--heading-color);
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 0.875rem 1.75rem;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+        
+        @media (max-width: 640px) {
+            .card {
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                <span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span>
+            </button>
+        </div>
+
+        <div class="card">
+            <h1>Daniel Miin</h1>
+            <div class="subtitle">Co-founder, Operis Health AI & Finance Executive</div>
+            
+            <p>
+                Daniel Miin is the Co-Founder of Operis Health AI, a computer vision platform designed to automate documentation and improve medication safety in anesthesia. With over 15 years of experience as a finance executive, he has advised numerous healthcare companies and navigated more than $15 billion in M&A and capital markets transactions. His career spans leadership roles at prestigious firms including Mesirow, Oppenheimer & Co., and Jefferies, as well as serving as Chief of Staff at Elekta.
+            </p>
+            <p>
+                Driven by a passion for building the next generation of healthcare solutions, Daniel actively mentors health tech and healthcare software startup founders. He currently lends his strategic expertise as a board member and advisor to several innovative organizations, such as CareShield AI, Vigilant Software, and the Providence Hospice Foundation. His professional focus remains centered on leveraging SaaS and financial leadership to drive meaningful digital transformation within the clinical landscape.
+            </p>
+            <p>
+                Beyond his professional endeavors, Daniel maintains a keen interest in the evolving landscape of AI and the integration of smart home technologies. This curiosity about how intelligent systems can enhance daily life mirrors his work in healthcare, where he applies advanced machine learning to solve complex operational challenges. Whether exploring new automation tools or advising on AI identity, he is dedicated to the responsible and impactful deployment of emerging tech.
+            </p>
+
+            <a href="mailto:hello@example.com" class="contact-btn">Get In Touch</a>
+
+            <div class="interests">
+                <h2>Interests & Pursuits</h2>
+                <div class="tags">
+                    <span class="tag">Mentoring Founders</span>
+                    <span class="tag">Tinkering with AI</span>
+                    <span class="tag">Smart Home Gadgets</span>
+                    <span class="tag">Health Tech</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+        
+        // We start with checking if the user already has a saved preference 
+        // Or if they have a system-level dark mode preference
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? "dark" : "light");
+        
+        // Apply the initial theme
+        if (currentTheme === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Light Mode';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            if (newTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Light Mode';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
