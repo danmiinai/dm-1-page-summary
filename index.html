@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +71,7 @@
             align-items: center;
             gap: 0.5rem;
             outline: none;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
 
         .theme-toggle:hover {
@@ -106,7 +107,7 @@
             margin-bottom: 1.5rem;
             font-size: 1.125rem;
         }
-        
+
         p:last-of-type {
             margin-bottom: 0;
         }
@@ -145,7 +146,7 @@
             color: var(--accent-color);
             transform: translateY(-1px);
         }
-        
+
         .contact-btn {
             display: inline-block;
             margin-top: 2.5rem;
@@ -163,17 +164,19 @@
             transform: translateY(-2px);
             color: #ffffff;
         }
-        
+
         @media (max-width: 640px) {
             .card {
                 padding: 2rem;
             }
+
             h1 {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -186,15 +189,27 @@
         <div class="card">
             <h1>Daniel Miin</h1>
             <div class="subtitle">Co-founder, Operis Health AI & Finance Executive</div>
-            
+
             <p>
-                Daniel Miin is the Co-Founder of Operis Health AI, a computer vision platform designed to automate documentation and improve medication safety in anesthesia. With over 15 years of experience as a finance executive, he has advised numerous healthcare companies and navigated more than $15 billion in M&A and capital markets transactions. His career spans leadership roles at prestigious firms including Mesirow, Oppenheimer & Co., and Jefferies, as well as serving as Chief of Staff at Elekta.
+                Daniel Miin is the Co-Founder of Operis Health AI, a computer vision platform designed to automate
+                documentation and improve medication safety in anesthesia. With over 15 years of experience as a finance
+                executive, he has advised numerous healthcare companies and navigated more than $15 billion in M&A and
+                capital markets transactions. His career spans leadership roles at prestigious firms including
+                Jefferies, Brookfield, and Advanced Micro Devices as well as serving as Chief of Staff at Elekta.
             </p>
             <p>
-                Driven by a passion for building the next generation of healthcare solutions, Daniel actively mentors health tech and healthcare software startup founders. He currently lends his strategic expertise as a board member and advisor to several innovative organizations, such as CareShield AI, Vigilant Software, and the Providence Hospice Foundation. His professional focus remains centered on leveraging SaaS and financial leadership to drive meaningful digital transformation within the clinical landscape.
+                Driven by a passion for building the next generation of healthcare solutions, Daniel actively mentors
+                health tech and healthcare software startup founders. He currently lends his strategic expertise as a
+                board member and advisor to several innovative organizations, such as CareShield AI, Vigilant Software,
+                and the Providence Hospice Foundation. His professional focus remains centered on leveraging SaaS and
+                financial leadership to drive meaningful digital transformation within the clinical landscape.
             </p>
             <p>
-                Beyond his professional endeavors, Daniel maintains a keen interest in the evolving landscape of AI and the integration of smart home technologies. This curiosity about how intelligent systems can enhance daily life mirrors his work in healthcare, where he applies advanced machine learning to solve complex operational challenges. Whether exploring new automation tools or advising on AI identity, he is dedicated to the responsible and impactful deployment of emerging tech.
+                Beyond his professional endeavors, Daniel maintains a keen interest in the evolving landscape of AI and
+                the integration of smart home technologies. This curiosity about how intelligent systems can enhance
+                daily life mirrors his work in healthcare, where he applies advanced machine learning to solve complex
+                operational challenges. Whether exploring new automation tools or advising on AI identity, he is
+                dedicated to the responsible and impactful deployment of emerging tech.
             </p>
 
             <a href="mailto:hello@example.com" class="contact-btn">Get In Touch</a>
@@ -215,12 +230,12 @@
         const toggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const themeText = document.getElementById('theme-text');
-        
+
         // We start with checking if the user already has a saved preference 
         // Or if they have a system-level dark mode preference
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
         const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? "dark" : "light");
-        
+
         // Apply the initial theme
         if (currentTheme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
@@ -231,10 +246,10 @@
         toggleBtn.addEventListener('click', () => {
             let theme = document.documentElement.getAttribute('data-theme');
             let newTheme = theme === 'dark' ? 'light' : 'dark';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
+
             if (newTheme === 'dark') {
                 themeIcon.textContent = '☀️';
                 themeText.textContent = 'Light Mode';
@@ -245,4 +260,5 @@
         });
     </script>
 </body>
+
 </html>
