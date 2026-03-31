@@ -147,22 +147,39 @@
             transform: translateY(-1px);
         }
 
+        .actions-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
         .contact-btn {
             display: inline-block;
-            margin-top: 2.5rem;
             padding: 0.875rem 1.75rem;
             background-color: var(--accent-color);
             color: #ffffff;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            transition: opacity 0.2s, transform 0.2s;
+            transition: opacity 0.2s, transform 0.2s, border-color 0.2s, color 0.2s;
         }
 
         .contact-btn:hover {
             opacity: 0.9;
             transform: translateY(-2px);
             color: #ffffff;
+        }
+
+        .contact-btn.secondary {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-btn.secondary:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
         }
 
         @media (max-width: 640px) {
@@ -191,7 +208,7 @@
             <div class="subtitle">Co-founder, Operis Health AI & Finance Executive</div>
 
             <p>
-                Daniel Miin is the Co-Founder of Operis Health AI, a computer vision platform designed to automate
+                Dan is the Co-Founder of Operis Health AI, a computer vision platform designed to automate
                 documentation and improve medication safety in anesthesia. With over 15 years of experience as a finance
                 executive, he has advised numerous healthcare companies and navigated more than $15 billion in M&A and
                 capital markets transactions. His career spans leadership roles at prestigious firms including
@@ -200,9 +217,10 @@
             <p>
                 Driven by a passion for building the next generation of healthcare solutions, Daniel actively mentors
                 health tech and healthcare software startup founders. He currently lends his strategic expertise as a
-                board member and advisor to several innovative organizations, such as CareShield AI, Vigilant Software,
-                and the Providence Hospice Foundation. His professional focus remains centered on leveraging SaaS and
-                financial leadership to drive meaningful digital transformation within the clinical landscape.
+                board member and advisor to several organizations, such as CareShield AI, Vigilant Software,
+                and the Providence Hospice Foundation. His professional focus remains centered on leveraging technology,
+                AI, and
+                financial leadership to drive meaningful digital transformation within the health tech landscape.
             </p>
             <p>
                 Beyond his professional endeavors, Daniel maintains a keen interest in the evolving landscape of AI and
@@ -212,7 +230,11 @@
                 dedicated to the responsible and impactful deployment of emerging tech.
             </p>
 
-            <a href="mailto:hello@example.com" class="contact-btn">Get In Touch</a>
+            <div class="actions-group">
+                <a href="mailto:daniel@miin.ai" class="contact-btn">E-mail Dan</a>
+                <a href="https://linkedin.com/in/danielmiin" target="_blank" rel="noopener noreferrer"
+                    class="contact-btn secondary">Connect on LinkedIn</a>
+            </div>
 
             <div class="interests">
                 <h2>Interests & Pursuits</h2>
