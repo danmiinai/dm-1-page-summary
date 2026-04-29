@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Miin Bio</title>
+    <style>
+        :root {
+            --bg-color: #f3f4f6;
+            --text-color: #374151;
+            --heading-color: #111827;
+            --card-bg: #ffffff;
+            --accent-color: #2563eb;
+            --border-color: #e5e7eb;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition-speed: 0.3s;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #111827;
+            --text-color: #d1d5db;
+            --heading-color: #f9fafb;
+            --card-bg: #1f2937;
+            --accent-color: #3b82f6;
+            --border-color: #374151;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 980px;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .title-wrap h1 {
+            color: var(--heading-color);
+            font-size: 2rem;
+            letter-spacing: -0.025em;
+            font-weight: 800;
+        }
+
+        .title-wrap p {
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            outline: none;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 0.55rem 1rem;
+            background-color: transparent;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            font-size: 0.875rem;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .slides {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .slide-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .slide-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .title-wrap h1 {
+                font-size: 1.5rem;
+            }
+
+            .slide-card {
+                padding: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-wrap">
+                <h1>Leader Driving Transformative Growth</h1>
+
+            </div>
+            <div class="header-actions">
+                <a href="index.html" class="contact-btn">Back to Profile</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="slides">
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-01.png" alt="Slide 1"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-02.png" alt="Slide 2"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-03.png" alt="Slide 3"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-04.png" alt="Slide 4"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-05.png" alt="Slide 5"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-06.png" alt="Slide 6"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-07.png" alt="Slide 7"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-08.png" alt="Slide 8"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-09.png" alt="Slide 9"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-10.png" alt="Slide 10"></section>
+            <section class="slide-card"><img class="slide-image" src="assets/dan-slides/slide-11.png" alt="Slide 11"></section>
+
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? "dark" : "light");
+
+        if (currentTheme === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+            themeIcon.textContent = '☀️';
+            themeText.textContent = 'Light Mode';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            if (newTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Light Mode';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+</body>
+
+</html>
